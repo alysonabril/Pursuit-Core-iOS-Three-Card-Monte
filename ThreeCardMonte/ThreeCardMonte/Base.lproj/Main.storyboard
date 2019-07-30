@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThreeCardMonte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq4-ih-xcz">
+                                <rect key="frame" x="52" y="187" width="121" height="185"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="cardPick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zcq-12-oNZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heB-qR-S4b">
+                                <rect key="frame" x="243" y="187" width="121" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="zvB-Wf-8gX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="cardPick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwE-fU-Gya"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwL-BR-eBf">
+                                <rect key="frame" x="157" y="392" width="121" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="cvz-O3-dhQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="cardPick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYn-4u-qfn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick A Card " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-ci-kNQ">
+                                <rect key="frame" x="89" y="661" width="236" height="92"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfR-h6-RTx">
+                                <rect key="frame" x="75" y="731" width="264" height="100"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
+                                <state key="normal" title="~ New Game ~">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EgH-aZ-CZc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.81449825249999996" blue="0.97592237189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lq4-ih-xcz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="0iu-Wb-4mv"/>
+                            <constraint firstItem="YwL-BR-eBf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="6dB-3p-TUQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WfR-h6-RTx" secondAttribute="bottom" constant="31" id="8PO-v3-MxM"/>
+                            <constraint firstItem="heB-qR-S4b" firstAttribute="top" secondItem="lq4-ih-xcz" secondAttribute="top" id="DPQ-Zq-1vg"/>
+                            <constraint firstItem="heB-qR-S4b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lq4-ih-xcz" secondAttribute="trailing" constant="8" symbolic="YES" id="Fvt-1O-eGp"/>
+                            <constraint firstItem="gdg-ci-kNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="JTL-Z7-rCO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YwL-BR-eBf" secondAttribute="trailing" constant="136" id="JzU-mT-0vl"/>
+                            <constraint firstItem="heB-qR-S4b" firstAttribute="leading" secondItem="lq4-ih-xcz" secondAttribute="trailing" constant="70" id="OVU-ik-yo2"/>
+                            <constraint firstItem="YwL-BR-eBf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="392" id="WfH-5N-fmx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gdg-ci-kNQ" secondAttribute="trailing" symbolic="YES" id="bYC-2X-Wyi"/>
+                            <constraint firstItem="WfR-h6-RTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eN8-CF-nnm"/>
+                            <constraint firstItem="heB-qR-S4b" firstAttribute="bottom" secondItem="lq4-ih-xcz" secondAttribute="bottom" id="gcf-I6-C5F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="heB-qR-S4b" secondAttribute="trailing" constant="50" id="gqF-6G-Ih3"/>
+                            <constraint firstItem="gdg-ci-kNQ" firstAttribute="top" secondItem="YwL-BR-eBf" secondAttribute="bottom" constant="84" id="nlM-c9-nBD"/>
+                            <constraint firstItem="WfR-h6-RTx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="qfn-JF-Ypt"/>
+                            <constraint firstItem="YwL-BR-eBf" firstAttribute="top" secondItem="lq4-ih-xcz" secondAttribute="bottom" constant="20" id="rMv-VP-7mJ"/>
+                            <constraint firstItem="WfR-h6-RTx" firstAttribute="centerX" secondItem="gdg-ci-kNQ" secondAttribute="centerX" id="tTa-cU-hk1"/>
+                            <constraint firstItem="lq4-ih-xcz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="tWp-d1-cfE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstCard" destination="lq4-ih-xcz" id="x1c-gi-ZQY"/>
+                        <outlet property="gameStatus" destination="gdg-ci-kNQ" id="ob9-0p-zbm"/>
+                        <outlet property="secondCard" destination="heB-qR-S4b" id="m2l-DK-j3l"/>
+                        <outlet property="thirdCard" destination="YwL-BR-eBf" id="Fx0-F2-mN0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cardBackRed" width="686" height="976"/>
+    </resources>
 </document>
